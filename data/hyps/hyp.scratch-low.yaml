@@ -1,0 +1,35 @@
+# Ultralytics YOLOv5 🚀, AGPL-3.0 license
+# Hyperparameters for low-augmentation COCO training from scratch
+# python train.py --batch 64 --cfg yolov5n6.yaml --weights '' --data coco.yaml --img 640 --epochs 300 --linear
+# See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
+
+
+lr0: 0.01  # 초기 학습률
+lrf: 0.01  # 최종 학습률
+momentum: 0.937  # 모멘텀
+weight_decay: 0.0005  # 가중치 감쇠
+warmup_epochs: 3.0  # 웜업 에포크 수
+warmup_momentum: 0.8  # 웜업 초기 모멘텀
+warmup_bias_lr: 0.1  # 웜업 초기 바이어스 학습률
+box: 0.05  # 박스 손실 가중치
+cls: 0.5  # 클래스 손실 가중치
+cls_pw: 1.0  # 클래스 BCELoss 양성 가중치
+obj: 1.0  # 객체 손실 가중치
+obj_pw: 1.0  # 객체 BCELoss 양성 가중치
+iou_t: 0.20  # IoU 학습 임계값
+anchor_t: 4.0  # 앵커 다중 임계값
+# anchors: 3  # 출력 레이어당 앵커 수 (사용하지 않음)
+fl_gamma: 0.0  # 포컬 로스 감마 값
+hsv_h: 0.015  # 이미지 HSV-색조 증강 비율
+hsv_s: 0.7  # 이미지 HSV-채도 증강 비율
+hsv_v: 0.4  # 이미지 HSV-밝기 증강 비율
+degrees: 10.0  # 이미지 회전 각도 범위 (+/- 10도)
+translate: 0.1  # 이미지 평행 이동 범위 (+/- 10%)
+scale: 0.5  # 이미지 크기 조절 범위 (+/- 50%)
+shear: 0.0  # 이미지 왜곡 각도
+perspective: 0.0  # 이미지 원근 변환 범위
+flipud: 0.0  # 이미지 상하 반전 확률
+fliplr: 0.5  # 이미지 좌우 반전 확률
+mosaic: 1.0  # 이미지 모자이크 증강 확률
+mixup: 0.0  # 이미지 믹스업 증강 확률
+copy_paste: 0.0  # 객체 복사-붙여넣기 증강 확률
